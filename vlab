@@ -1,5 +1,5 @@
 function FindProxyForURL(url, host) {
-    var regexpr = /^(http|ws)s?://[^.lab-services.ca]+$/;
+    var regexpr = /^https?:\/\/.*\.lab-services\.ca.*$/;
     if (regexpr.text(host)) {
         return "PROXY vlabproxy1.ms.bell.ca:8080; PROXY vlabproxy2.ms.bell.ca:8080"; 
     }
