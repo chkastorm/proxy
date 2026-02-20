@@ -1,6 +1,7 @@
 function FindProxyForURL(url, host) {
-    if (shExpMatch(host, "*.lab-services.ca")) {
-        return "PROXY vlabproxy1.ms.bell.ca:8080"; 
+    var regexpr = "\.*.lab-services.ca/";
+    if (regexpr.text(host)) {
+        return "PROXY vlabproxy1.ms.bell.ca:8080; PROXY vlabproxy2.ms.bell.ca:8080"; 
     }
     else {
     return "DIRECT";
