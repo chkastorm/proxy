@@ -1,5 +1,8 @@
 function FindProxyForURL(url, host) {
-    if (dnsDomainIs(host, ".lab-services.ca"))
+    if (dnsDomainIs(host, ".lab-services.ca")) {
         return "PROXY vlabproxy1.ms.bell.ca:8080; PROXY vlabproxy2.ms.bell.ca:8080"; 
-    return "DIRECT";
+    };
+    else {
+        return "DIRECT";
+    };
 }
